@@ -1,10 +1,13 @@
 {% extends 'main_app/layout.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>home</p>
+    <div class="features">
+        <h1>{{ title }}</h1>
 
-    {% include 'main_app/test.html' %}
+        <p>Привет, это небольшое веб-приложение, которое позволит тебе отмечать любимые места в котрых ты побывали или собираетесь побывать</p>
+        <button class="btn btn-warning"> Зарегестрируся чтобы начасть</button>
+
+    </div>
 {% endblock %}
