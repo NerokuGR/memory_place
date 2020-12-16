@@ -1,0 +1,1 @@
+web: gunicorn memory_place2.wsgi --log-file -
