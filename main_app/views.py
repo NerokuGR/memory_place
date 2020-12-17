@@ -12,7 +12,7 @@ def login(request):
 
 # декоратор для логина
 # отображение стартовой странцы
-@login_required
+# @login_required
 def home(request):
     data = {
         'title': 'home',
