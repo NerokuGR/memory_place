@@ -57,7 +57,7 @@ main .features p {max-width: 400px; margin: 20px auto}
 
 /*home*/
 
-main .col-sm-12 {
+main .col-sm-12 h4 {
     float: left;
     color: #fff;
     margin-top: 20px;
