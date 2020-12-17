@@ -7,7 +7,7 @@
     <div class="col-sm-12 mb-3">
       <h4 class="text-center">Welcome {{ user.username }}</h4>
     </div>
-        <!-- Add from here -->
+
     {% for ass in backends.associated %}
       {% if ass.provider == 'facebook' %}
         <div class="col-md-6 text-center">
@@ -24,6 +24,6 @@
         <a style="text-decoration: none" href="{% url 'logout' %}">Выйти</a>
       </button>
     </div>
-        <!-- End here -->
+
   </div>
 {% endblock %}
