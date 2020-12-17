@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'social_django',
     # my apps
     # 'social_django',
     'main_app',
@@ -138,4 +138,16 @@ DATABASES['default'].update(db_from_env)
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+]
 
+SOCIAL_AUTH_FACEBOOK_KEY = '211186420607402'
+
+SOCIAL_AUTH_FACEBOOK_SECRET = '0858f98cfe1234c7c35d978a1c665fdf'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home_page'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'

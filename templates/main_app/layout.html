@@ -16,19 +16,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-    <aside>
-        <img src="{% static 'main_app/img/logo.png' %}" class="img-fluid" alt="Logo">
-        <span class="logo">MemoryPlace</span>
-        <h3>Навигация</h3>
-        <ul>
-            <a style="text-decoration: none" href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</li></a>
-            <a style="text-decoration: none" href="{% url 'about' %}"><li> Про нас</li></a>
-            <a style="text-decoration: none" href=""><li> Контакты</li></a>
-        </ul>
-    </aside>
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '482324092733852',
+            autoLogAppEvents : true,
+            xfbml      : true,
+            version    : 'v9.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<aside>
+    <img src="{% static 'main_app/img/logo.png' %}" class="img-fluid" alt="Logo">
+    <span class="logo">MemoryPlace</span>
+    <h3>Навигация</h3>
+    <ul>
+        <a style="text-decoration: none" href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</li></a>
+        <a style="text-decoration: none" href="{% url 'about' %}"><li> Про нас</li></a>
+    </ul>
+</aside>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
 </body>
 </html>

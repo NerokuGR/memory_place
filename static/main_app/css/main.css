@@ -54,3 +54,16 @@ main .features {
 
 main .features h1 {font-size: 50px;}
 main .features p {max-width: 400px; margin: 20px auto}
+
+/*login*/
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn a, .btn a:hover {
+  color: white;
+  text-decoration: none ;
+}
