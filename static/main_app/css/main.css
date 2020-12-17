@@ -74,5 +74,7 @@ main .col-md-6 {
 }
 
 main .col-sm-12 button a {
+    margin-top: 5px;
+    float: right;
     color: #ffffff;
 }
