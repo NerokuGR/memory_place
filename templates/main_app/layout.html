@@ -46,8 +46,12 @@
     </ul>
 </aside>
 <main>
-    {% block content %}
-    {% endblock %}
+    <div class="container-fluid">
+        <div class="card.p-5">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
 </main>
 </body>
 </html>
