@@ -13,9 +13,9 @@ def login(request):
 # декоратор для логина
 # отображение стартовой странцы
 @login_required
-def index(request):
+def home(request):
     data = {
-        'title': 'Home',
+        'title': 'home',
     }
     return render(request, 'main_app/home_page.html', data)
 
