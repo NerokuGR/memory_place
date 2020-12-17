@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 # отображение страницы логина
 def login(request):
     data = {
-        'title': 'Sign in',
+        'title': 'Sing in',
     }
     return render(request, 'main_app/login.html', data)
 

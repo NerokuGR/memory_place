@@ -55,19 +55,12 @@ main .features {
 main .features h1 {font-size: 50px;}
 main .features p {max-width: 400px; margin: 20px auto}
 
-/*login*/
+/*home*/
 
-.card {
-  width: 100%;
-}
-
-.social-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.btn a, .btn a:hover {
-  color: white;
-  text-decoration: none ;
+main .col-sm-12 {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
 }
