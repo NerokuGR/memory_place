@@ -26,3 +26,4 @@ def about(request):
         'title': 'about',
     }
     return render(request, 'main_app/about.html', data)
+

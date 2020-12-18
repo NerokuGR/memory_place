@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     # my apps
-    # 'social_django',
     'main_app',
+    'gmap',
 ]
 
 MIDDLEWARE = [
