@@ -60,10 +60,10 @@ main .features button a {
 }
 
 #map {
-    margin-left: 350px;
-    margin-top: 50px;
-    height: 400px;
-    width: 600px;
+    margin-left: 180px;
+    margin-top: 20px;
+    height: 600px;
+    width: 1000px;
     position: center;
     float: left;
 }

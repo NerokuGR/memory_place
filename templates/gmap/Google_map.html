@@ -1,25 +1,32 @@
 {% extends 'gmap/base.html' %}
 {% block title %}{{ title }}{% endblock %}
+
+{% block aside %}
+    <ul>
+        <a style="text-decoration: none" href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</li></a>
+        <a style="text-decoration: none" href="{% url 'map' %}"><li> Карта</li></a>
+    </ul>
+{% endblock %}
+
 {% block content %}
 
-     <div class="features">
+    <div class="features">
         <h3>Здесь вы можешь отметить места в которых вы были</h3>
-     </div>
-<div id="map"></div>
+    </div>
+    <div id="map"></div>
 
-<script>
-    function initMap() {
-        var opt = {
-            center: {lat: 35.69641224243883, lng: 139.57045315580982},
-            zoom: 15
+    <script>
+        function initMap() {
+            const opt = {
+                center: {lat: 35.69641224243883, lng: 139.57045315580982},
+                zoom: 15
+            }
+            const map = new google.maps.Map(document.getElementById("map"), opt);
         }
+    </script>
 
-        var map = new google.maps.Map(document.getElementById("map"), opt);
-    }
-</script>
-
-<script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxgcAQ7BfP_HS0f4UH3U3V6jQaXcW47UY&callback=initMap">
-</script>
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxgcAQ7BfP_HS0f4UH3U3V6jQaXcW47UY&callback=initMap">
+    </script>
 {% endblock %}
 

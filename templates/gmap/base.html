@@ -15,12 +15,9 @@
 <aside>
     <img src="{% static 'main_app/img/logo.png' %}" class="img-fluid" alt="Logo">
     <span class="logo">MemoryPlace</span>
-    <h3>Навигация</h3>
-    <ul>
-        <a style="text-decoration: none" href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</li></a>
-        <a style="text-decoration: none" href="{% url 'about' %}"><li> Про нас</li></a>
-        <a style="text-decoration: none" href="{% url 'map' %}"><li> Карта</li></a>
-    </ul>
+    {% block aside %}
+        <h3>Навигация</h3>
+    {% endblock %}
 </aside>
 <main>
     {% block content %}
